@@ -1,0 +1,22 @@
+name: trybuzzer_tiktok_dual_upload
+title: TryBuzzer TikTok Dual Upload
+description: Upload the same TryBuzzer video to TikTok after Instagram and submit it for TikTok when the brief allows it.
+category: Business
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - https://www.tiktok.com/@fhygogo/video/7706018106342116615
+  - ~/workspace/.tools/trybuzzer_tiktok.json
+  - ~/workspace/custom-skills/trybuzzer_threads_campaigns/SKILL.md
+  - ~/MEMORY.md
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No dual-upload run fails its Instagram post because a TikTok whirl puzzle or a dead TikTok session appears, and no run repeats an automated whirl drag after the skill installs.
+    window_days: 30
+  needs_review: false
+  rationale: The 9 Nov 2026 TikTok pilot proved the dual-upload path works when the brief allows TikTok. The same Color Shield video aired on Instagram and on TikTok at https://www.tiktok.com/@fhygogo/video/7706018106342116615 and was submitted to TryBuzzer for TikTok as Menunggu needing 1000 views. The same run also showed the failure mode this skill fixes. The whirl puzzle did not respond to automated browser input, community research found synthetic events are not trusted and drag trajectory is scored with 6 attempts and 0 passes, and the assistant first promised automation then corrected that after failed attempts. The user solved the puzzle once manually about 11:02 WIB and the session then persisted. The pilot thumbnail also lost its headline because the TikTok cover was not set, and the user decided not to delete or repost a submitted video. No existing skill covers this path. The Threads skill is Threads only, tiktok-affiliate is Shop affiliate work and is not managed, and connector search found no TryBuzzer or TikTok upload connector. The user approved automatic dual upload on 9 Nov 2026 with step 7B in the Instagram production crons, so this recurring twice daily path needs the brief check, the cover rule, the graceful TikTok skip and the manual-only whirl rule written down.
+  review_after: 2026-12-09T04:42:34.477313+00:00
+  reviewed_at: 2026-11-09T04:42:34.477313+00:00
+  run_id: sirun_3f1926bc392e4c1395e34d8667946886

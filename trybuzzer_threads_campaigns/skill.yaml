@@ -1,0 +1,20 @@
+name: trybuzzer_threads_campaigns
+title: TryBuzzer Threads Campaigns
+description: Produce a TryBuzzer Threads post from the official campaign assets through the correction gate, publishing, follow and submission, with the campaign rules checked before it airs.
+category: Business
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-b1573d11-3eec-e083-b4b5-a5b43061d11f
+  - message:assistant-msg-42d1d13c-df74-41f7-bc65-2712f3ee5dc3
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No API published post loses the hash mark on a required hashtag in 30 days.
+    window_days: 30
+  needs_review: false
+  rationale: First hashtag in API text loses its hash mark. Two posts showed it. Sacrificial first hashtag fix verified twice.
+  review_after: 2026-12-07T04:55:48.444368+00:00
+  reviewed_at: 2026-11-07T04:55:48.444368+00:00
+  run_id: sirun_7afa7f8f1680498bbed09b5698b13673
