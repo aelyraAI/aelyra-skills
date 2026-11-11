@@ -2,12 +2,12 @@
 
 Koleksi lengkap skill untuk **Aelyra** — asisten personal berbasis Muse yang beroperasi sebagai operator produksi: video fakta berkarakter (channel Tiko), otomasi campaign TryBuzzer (Threads/Instagram/TikTok), affiliate TikTok, dan produksi media kode (Remotion/Three.js/Blender).
 
-Repo ini berisi **240 skill** aktif yang terpasang di `~/workspace/custom-skills/` — setiap folder adalah satu skill mandiri dengan berkas `SKILL.md` sebagai pintu masuknya: doktrin, alur kerja, dan resep yang dipakai Aelyra untuk menyelesaikan pekerjaan secara konsisten dari sesi ke sesi.
+Repo ini berisi **241 skill** aktif yang terpasang di `~/workspace/custom-skills/` — setiap folder adalah satu skill mandiri dengan berkas `SKILL.md` sebagai pintu masuknya: doktrin, alur kerja, dan resep yang dipakai Aelyra untuk menyelesaikan pekerjaan secara konsisten dari sesi ke sesi.
 
 ## Isi repo
 
 - **Channel, Sosial & Produksi Konten** — 9 skill
-- **Video, Motion & Web** — 66 skill
+- **Video, Motion & Web** — 67 skill
 - **3D, Game & Aset** — 66 skill
 - **Gaya Visual & Mood** — 40 skill
 - **Audio, Suara & Musik** — 14 skill
@@ -80,6 +80,7 @@ Repo ini berisi **240 skill** aktif yang terpasang di `~/workspace/custom-skills
 | `hyperframes-creative` | Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typogra... |
 | `hyperframes-media` | Audio and media assets for HyperFrames compositions, produced by one shared audio engine (`scripts/audio.mjs`) — multi-provider... |
 | `hyperframes-registry` | About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, titles, kinetic ty... |
+| `line-art-animation` | Build animated line-art components in SVG and TypeScript — thin ink lines on paper, people and animals that walk, run, cycle an... |
 | `lottie-bodymovin` | Use when implementing Disney's 12 animation principles with Lottie animations exported from After Effects |
 | `motion-doctrine` | GATEWAY — load FIRST before composing any HyperFrames animation or video. The high-level motion law that makes a multi-scene vi... |
 | `motion-graphics` | > |

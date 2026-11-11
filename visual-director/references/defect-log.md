@@ -80,3 +80,34 @@ Format entri baru: tanggal · proyek · gejala (kata user bila ada) · akar peny
   warna belang; tepi struktur lereng wajib MENYATU ke tanah (taper di
   fungsi ketinggian bersama), bukan berakhir sebagai dinding; QA still
   selalu menyertakan frame 0 dan frame 30.
+
+## 2026-11-11 · Ijen PENUH 9 adegan (standar v5 + lipsync)
+- Gejala: ditolak — "waduh masih jauh banget levelnya". Kepadatan, geografi,
+  lipsync, dan finishing semua lolos; yang ditolak LEVEL RENDER-nya.
+- Akar: (1) permukaan masih flat-shaded warna tunggal — batu = ikosahedron
+  polos, danau = hamparan datar; (2) penambang masih primitif kapsul/blok;
+  (3) TIDAK ADA post-processing sama sekali — tanpa ACES tone mapping dan
+  bloom, api biru terbaca sebagai kristal menyala, bukan api, dan cahaya
+  tidak "mahal"; (4) Tiko billboard 2D datar di dunia 3D makin kontras
+  murahnya di samping model referensi. Roadmap ACES+bloom ditunda terus
+  sejak v5 — itu kesalahan prioritas: kepadatan dikejar, render tidak.
+- ATURAN: kepadatan TIDAK cukup. Standar render (ACES + bloom, material
+  bertekstur berlapis dengan variasi roughness, model karakter beronderdil,
+  cahaya sinematik) wajib DIBUKTIKAN di satu adegan hero dan dibandingkan
+  frame-to-frame melawan frame referensi (How Come/Kacaurus) SEBELUM
+  produksi penuh. Item roadmap yang menyangkut level render tidak boleh
+  ditunda melewati satu siklus produksi.
+
+## 2026-11-11 · Ijen penuh — tindak lanjut penolakan (aksi tidak diperagakan)
+- Gejala: user menegaskan — "tidak menampilkan orang menambang dll".
+  Narasi S6 bercerita penambang mengungkit belerang dengan linggis di
+  mulut pipa, tapi yang tampil di layar hanya demo bongkahan tumbuh;
+  penambang WorkerBent hanya figuran kecil yang tidak terbaca aksinya
+  dari jarak shot yang dipakai.
+- Akar: peta memetakan kata narasi ke OBJEK demo, bukan ke AKSI manusia;
+  tidak ada satu pun medium/close shot orang bekerja di seluruh video.
+- ATURAN: setiap klaim aksi di naskah ("menambang", "memikul", "menimbang")
+  wajib dipetakan ke shot AKSI yang terbaca — karakter memeragakan proses
+  dalam medium/close shot (mengungkit → bongkahan pecah → keranjang diisi
+  → pikul berangkat), bukan sekadar hadir sebagai figuran latar. Saat
+  menulis peta, tandai per segmen: AKSI SIAPA, terlihat dari jarak apa.

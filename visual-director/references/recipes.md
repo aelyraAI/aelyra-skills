@@ -106,6 +106,52 @@ permukaan) muncul di SEMUA bidikan benda itu — jangan digambar ulang beda-beda
    (kejadian nyata 2026-11-10: Tiko hilang/mulut tertutup di still, padahal kode
    benar; still ulang setelah render latar mati langsung lulus).
 
+## Gait solver & gerak sekunder (tambang dari line-art-animation, 2026-11-11)
+Sumber: repo JDhruv14/line-art-animation (MIT, terpasang sebagai skill
+`line-art-animation`), modul `lib/gait.ts` + `lib/motion.ts`. Solver-nya 2D
+bidang sagital (x = maju, y = atas); pakai di bidang lokal karakter 3D —
+target kaki dari solver memberi makan IK dua tulang untuk lutut.
+
+GAIT — empat aturan yang membuat langkah terbaca nyata:
+1. **Kaki menapak diam di dunia**: kaki tumpu bergerak mundur relatif ke
+   tubuh persis secepat kecepatan jalan. `speed = stride / (duty × period)`
+   (satuan/detik); posisi kaki tumpu menyapu +stride/2 → −stride/2 secara
+   LINEAR selama fase tumpu. Kecepatan dunia karakter WAJIB = speed × skala
+   figur, kalau tidak kaki meluncur.
+2. **Ayunan minimum-jerk**: kaki bebas mengikuti `minJerk(s) = s³(10 − 15s +
+   6s²)` pada sumbu maju; ketinggian angkat berprofil `sin^p` (p≈1,2).
+3. **Tumit mengelupas sebelum ayun**: pada 0,14 terakhir fase tumpu, kaki
+   berputar pada UJUNG JARI (pivot di toe), pitch naik ke `heelOff`
+   (jalan 15°, geser 12°).
+4. **Tinggi pinggul dari jangkauan kaki, BUKAN bob sinus**: reach =
+   (paha + betis) × 0,983; untuk tiap kaki tumpu, hipY = ankleY −
+   sqrt(reach² − dx²); ambil nilai MAKS dari kaki tumpu. Hasilnya tubuh
+   naik saat kaki bersilangan dan turun saat tumpu ganda. Lari beda:
+   kompres di atas kaki tumpu, tertinggi saat fase terbang.
+Preset (period dtk · duty · stride · lift): jalan 1,0 · 0,62 · 24 · 3,4 —
+geser/seret 0,9 · 0,64 · 18 · 2,4 — lari 0,5 · 0,36 · 16 · 12 (+heelKick).
+**Penambang pikulan pakai preset geser** (langkah pendek, duty besar, angkat
+rendah) + badan condong ke depan + period diperlambat; parameter `go`
+(0..1) mem-blend pose ke berdiri diam untuk berhenti/beraksi.
+Lutut: IK dua tulang, pilih solusi yang menekuk ke DEPAN.
+
+GERAK SEKUNDER — fisika kecil dari motion.ts:
+- `spring(kekakuan 40, redaman 6)`: integrasi Euler semi-implisit menuju
+  target BERGERAK — untuk apa pun yang menempel di tubuh bergerak (lengan
+  baju, tas, telinga, payung). `kick(v)` untuk impuls mendadak.
+- `pendulum(kekakuan ±10, redaman ±1,1)`: benda menggantung — keranjang
+  pikulan, lampion, papan, keranjang gendong. Gaya penggeraknya =
+  PERCEPATAN pembawa di frame itu, bukan posisi.
+- `wobble(t)`: sinus berlapis 1,3/2,7/5,1 berbobot 0,6/0,3/0,1 — drift
+  organik yang tidak terbaca sebagai loop (asap, pijar api, riak air).
+- Random statis WAJIB seeded (penempatan batu/properti) agar render
+  deterministik antar-frame dan antar-render.
+
+PERINGATAN REMOTION: render bersifat stateless dan frame bisa dirender
+tidak berurutan — integrasi spring/pendulum TIDAK boleh diakumulasi antar
+panggilan render. Simulasikan deterministik dari awal adegan sampai frame
+diminta dengan dt tetap 1/30, atau pra-hitung jadi tabel.
+
 ## Roadmap peningkatan render (belum diterapkan — kandidat siklus berikutnya)
 - ACESFilmicToneMapping + exposure terkalibrasi di ThreeCanvas.
 - Bloom selektif (UnrealBloomPass via three/examples postprocessing) untuk

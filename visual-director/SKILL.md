@@ -4,8 +4,8 @@ description: Mesin kualitas untuk semua video gambar-kode (Remotion/Three.js/2D)
 license: MIT
 metadata:
   author: Aelyra (untuk user)
-  version: "1.3.0"
-  updated: "2026-11-10"
+  version: "1.4.0"
+  updated: "2026-11-11"
 ---
 
 # Visual Director — Mesin Kualitas Video Kode
@@ -105,6 +105,7 @@ semuanya hanya terlihat di still multi-sudut, tidak di kode.
 - Skill dianggap basi bila log cacat tidak bertambah setelah ada penolakan.
 
 ## Changelog
+- 1.4.0 (2026-11-11) — Resep baru "Gait solver & gerak sekunder" di recipes.md, ditambang dari repo line-art-animation (JDhruv14, MIT; terpasang sebagai skill referensi gerak): gait 4 aturan (kaki tumpu diam di dunia, ayunan minimum-jerk, tumit mengelupas, pinggul dari jangkauan kaki — tanpa bob sinus), preset geser untuk penambang pikulan, spring/pendulum untuk gerak sekunder, peringatan integrasi deterministik di Remotion.
 - 1.3.0 (2026-11-10) — Lipsync masuk §5 + resep Lipsync billboard (varian mulut dari rig + envelope amplitudo + viseme o/u); catatan QA: still di bawah beban CPU berat bisa menangkap state tekstur belum settle — verifikasi still tekstur WAJIB di sistem tenang (render latar dimatikan dulu).
 - 1.2.0 (2026-11-10) — Standar detail benda lima lapis dari riset ngulikin.com (kartu tol NFC) masuk §2 + resep; riset pendamping Kacaurus untuk model channel serial (satu set rumah dipakai ulang, properti pembawa plot, Bagian + Cerita Lengkap).
 - 1.1.0 (2026-11-10) — Standar finishing audio: loudness −14 LUFS terukur
