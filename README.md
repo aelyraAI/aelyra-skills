@@ -2,7 +2,7 @@
 
 Koleksi lengkap skill untuk **Aelyra** — asisten personal berbasis Muse yang beroperasi sebagai operator produksi: video fakta berkarakter (channel Tiko), otomasi campaign TryBuzzer (Threads/Instagram/TikTok), affiliate TikTok, dan produksi media kode (Remotion/Three.js/Blender).
 
-Repo ini berisi **241 skill** aktif yang terpasang di `~/workspace/custom-skills/` — setiap folder adalah satu skill mandiri dengan berkas `SKILL.md` sebagai pintu masuknya: doktrin, alur kerja, dan resep yang dipakai Aelyra untuk menyelesaikan pekerjaan secara konsisten dari sesi ke sesi.
+Repo ini berisi **242 skill** aktif yang terpasang di `~/workspace/custom-skills/` — setiap folder adalah satu skill mandiri dengan berkas `SKILL.md` sebagai pintu masuknya: doktrin, alur kerja, dan resep yang dipakai Aelyra untuk menyelesaikan pekerjaan secara konsisten dari sesi ke sesi.
 
 ## Isi repo
 
@@ -44,6 +44,7 @@ Repo ini berisi **241 skill** aktif yang terpasang di `~/workspace/custom-skills
 | `trybuzzer_threads_campaigns` | — |
 | `trybuzzer_tiktok_dual_upload` | — |
 | `visual-director` | Mesin kualitas untuk semua video gambar-kode (Remotion/Three.js/2D): protokol riset-dulu dari referensi nyata, anggaran kepadat... |
+| `voxel-whatif-status-board` | Voxel what-if storytelling with a floating status board — teknik video pendek vertikal ala Minecraft/Roblox dengan papan status melayang berkod... |
 
 ### Video, Motion & Web
 
